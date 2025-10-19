@@ -1,31 +1,13 @@
-	•	Clinic Management:
-	•	Supports three clinics (Heart, Pulmonary, Plastic Surgery).
-	•	Each clinic maintains a queue of up to 10 patients (both regular and critical).
-	•	Uses custom queue and linked-list structures
-	•	Patient Operations:
-	•	Add regular or critically ill patients.
-	•	Remove patients for operations (critical first).
-	•	Cancel patients by SSN with validation and error logs.
-	•	View all current patients in a department.
-	•	File I/O & Validation:
-	•	Reads initial patient list from patient.csv.
-	•	Logs all successful and failed transactions to a separate file.
-	•	Detects and reports invalid data (bad SSNs, full queues, or invalid clinic names).
-	•	Data Structures:
-	•	Patient struct storing name, SSN, and status.
-	•	Clinic class handling queue operations and logging.
-	•	Modular .h and .cpp files for clean organization.
+Overview
 
+This project combines two earlier C++ programs — a Hospital Management System and a Sentiment Analysis Program — into one integrated system. The hospital part focuses on managing patients, clinics, and operations using queues, files, and data validation, while the sentiment analysis part focuses on analyzing written feedback and calculating overall sentiment scores.
 
+By combining both, the goal is to create a system that not only manages hospital operations efficiently but can also analyze patient feedback to improve decision-making and service quality.
 
- Planned 
+Current Progress
 
-(These are the parts you’re adding next, so keep them as “planned” — you can change them to “implemented” later.)
-	•	Ambulance Tracking System:
-Track ambulance dispatches, routes, and arrivals for each clinic.
-	•	Room Allocation:
-Assign patients to available rooms dynamically and record availability by department.
-	•	Feedback Sentiment Analysis:
-Collect daily patient feedback, analyze tone using sentiment scoring, and attach reports to each clinic.
-	•	Daily Summary Reports:
-Combine patient data and sentiment analysis to produce an end-of-day operational summary.
+The hospital section currently handles patient registration, queue management, and transaction logging for multiple clinics. The sentiment module processes text feedback using word sentiment values from a dataset. Together, these two systems lay the foundation for a more complete hospital platform that connects patient management with feedback analysis.
+
+Next Steps
+
+Work is ongoing to expand the system with additional features such as ambulance tracking, room management, and automated feedback summaries at the end of each workday.
