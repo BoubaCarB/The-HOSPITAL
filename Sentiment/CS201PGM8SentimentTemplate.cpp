@@ -3,16 +3,21 @@
 
 // Source : Chatgpt, used wherever I didn't know how to write a lin of code, and it also modified when stuck with errors.
 
-#include <ctime>
-#include "Sentiment.cpp"
+#include <iostream>
+#include <fstream>
+#include <string>
 using namespace std;
+
+#include "Sentiment.h"
+#include "sentiment1.h"
+#include "SentimentMain.h"
+
 
   // Include this at the top of your file
 
 
-    
 
-int main() {
+void runSentiment() {
 
     
     vector<wordList> sentList, posList, negList;
@@ -24,7 +29,7 @@ int main() {
     ofstream outFile("output.txt");
     if (!outFile) {
         cout << "Error: Unable to create output file.\n";
-        return 1;
+        return;
     }
 
     // open review files
@@ -53,6 +58,6 @@ int main() {
 
      //close the output file
     outFile.close(); 
-    return 0;
+    return;
 }
 

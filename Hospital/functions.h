@@ -6,8 +6,7 @@
 #include <string>
 #include <cctype>
 
-
-
+#pragma once
 
 using namespace std;
 

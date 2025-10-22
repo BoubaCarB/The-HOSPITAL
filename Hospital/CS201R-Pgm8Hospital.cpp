@@ -1,14 +1,19 @@
 // CS201R-Pgm8Hospital.cpp : This file contains the 'main' function. Program execution begins and ends there.
 // Boubacar Balde
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+using namespace std;
 
-#include "functions.cpp"
+#include "functions.h"   // header, NOT functions.cpp
+#include "Hospital.h"
 
-
-int main() {
+void runHospital() {
     ofstream transFile("transaction.log"); 
     if (!transFile.is_open()) {
         cout << "Cannot open transaction file.\n";
-        return 1;
+        return;
     }
 
     Clinic heartClinic("Heart Clinic", "HC", transFile); 
@@ -18,7 +23,7 @@ int main() {
     ifstream inFile("patient.csv");  // read from patient.csv
     if (!inFile.is_open()) {
         cout << "Cannot open patient.csv\n";
-        return 1;
+        return;
     }
 
     string line;
@@ -139,5 +144,5 @@ int main() {
 
     transFile.close();  // Close files
     cout << "Program ended. Check transaction.log and patient_next_day.csv.\n";
-    return 0;
+    return ;
 }
