@@ -24,7 +24,7 @@ void loadSentiment(vector<wordList>& sentList,
     vector<wordList>& negList) {
 
     //open sentiment.txt
-    ifstream inFile("sentiment.txt");
+    ifstream inFile("../Sentiment/sentiment.txt");
     if (!inFile) {
         cout << "Error: Unable to open sentiment.txt\n";
         return;

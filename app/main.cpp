@@ -1,6 +1,6 @@
 /*#include <iostream>
 #include <string>
-using namespace std; bb
+using namespace std; 
 
 #include "../Hospital/Hospital.h"
 #include "../Sentiment/SentimentMain.h"

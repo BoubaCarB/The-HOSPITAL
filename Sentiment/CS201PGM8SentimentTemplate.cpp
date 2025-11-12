@@ -16,7 +16,6 @@ using namespace std;
   // Include this at the top of your file
 
 
-
 void runSentiment() {
 
     
@@ -26,7 +25,7 @@ void runSentiment() {
     loadSentiment(sentList, posList, negList);
 
     // open output file 
-    ofstream outFile("output.txt");
+    ofstream outFile("../Sentiment/output.txt");
     if (!outFile) {
         cout << "Error: Unable to create output file.\n";
         return;
@@ -37,7 +36,7 @@ void runSentiment() {
     for (unsigned int i = 1; i < 9; i++) {
 
         // open input file adding to_string(i) + ".txt" to review
-        string fileName = "review" + to_string(i) + ".txt";
+        string fileName = "../Sentiment/review" + to_string(i) + ".txt";
         ifstream inFile(fileName);
         
         // if not able to open, print a message and continue

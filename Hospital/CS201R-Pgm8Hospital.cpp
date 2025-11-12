@@ -10,7 +10,8 @@ using namespace std;
 #include "Hospital.h"
 
 void runHospital() {
-    ofstream transFile("transaction.log"); 
+    //ofstream transFile("transaction.log"); 
+    ofstream transFile("../Hospital/transaction.log");
     if (!transFile.is_open()) {
         cout << "Cannot open transaction file.\n";
         return;
@@ -20,7 +21,8 @@ void runHospital() {
     Clinic pulmonaryClinic("Pulmonary Clinic", "PC", transFile);
     Clinic plasticClinic("Plastic Surgery Clinic", "PSC", transFile);
 
-    ifstream inFile("patient.csv");  // read from patient.csv
+    //ifstream inFile("patient.csv");  // read from patient.csv
+    ifstream inFile("../Hospital/patient.csv");
     if (!inFile.is_open()) {
         cout << "Cannot open patient.csv\n";
         return;
@@ -136,7 +138,8 @@ void runHospital() {
     transFile << "\nPlastic Surgery Clinic Report:\n";
     plasticClinic.saveForTomorrow(transFile);
 
-    ofstream outFile("patient_next_day.csv");  // Save to new CSV
+    //ofstream outFile("patient_next_day.csv");  // Save to new CSV
+    ofstream outFile("../Hospital/patient_next_day.csv");
     heartClinic.saveForTomorrow(outFile);
     pulmonaryClinic.saveForTomorrow(outFile);
     plasticClinic.saveForTomorrow(outFile);
